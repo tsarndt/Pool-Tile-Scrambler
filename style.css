@@ -1,0 +1,60 @@
+body{
+	font-family: helvetica;
+	color: gray;
+}
+
+#container{
+	width: 1225px;
+	margin: 0 auto;
+	margin-top: 100px;
+}
+
+h1:hover{
+	cursor: default;
+}
+
+.box{
+	height: 100px;
+	width: 100px;
+	border: thin solid gray;
+	float: left;
+}
+
+.clear{
+	clear: both;
+}
+
+button{
+	height: 50px;
+	width: 100px; 
+	margin-top: 50px;
+	float: right;
+}
+
+button:hover{
+	cursor:pointer;
+}
+
+#percentages{
+	float: left;
+	margin-top: 50px;
+}
+
+p{
+	margin-top: 0;
+	margin-bottom: 13px;
+}
+
+label{
+	margin-left: 20px;
+}
+
+.firstRadio{
+	margin-left: 0;
+}
+
+input{
+	background-color: red;
+	margin-right: 30px;
+	margin-left: 5px;
+}

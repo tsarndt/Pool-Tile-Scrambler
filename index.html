@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+
+<head>
+
+<title>Pool Tile Scrambler</title>
+<meta charset="UTF-8" />
+<link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+
+<body>
+
+	<div id="container">
+
+		<h1>Pool Tile Scrambler</h1>
+
+		<div class="box"></div>
+		<div class="box"></div>
+		<div class="box"></div>
+		<div class="box"></div>
+		<div class="box"></div>
+		<div class="box"></div>
+		<div class="box"></div>
+		<div class="box"></div>
+		<div class="box"></div>
+		<div class="box"></div>
+		<div class="box"></div>
+		<div class="box"></div>
+
+		<div class="clear"></div>
+
+		<div class="box"></div>
+		<div class="box"></div>
+		<div class="box"></div>
+		<div class="box"></div>
+		<div class="box"></div>
+		<div class="box"></div>
+		<div class="box"></div>
+		<div class="box"></div>
+		<div class="box"></div>
+		<div class="box"></div>
+		<div class="box"></div>
+		<div class="box"></div>
+	
+		<div class="clear"></div>
+
+		<div class="box"></div>
+		<div class="box"></div>
+		<div class="box"></div>
+		<div class="box"></div>
+		<div class="box"></div>
+		<div class="box"></div>
+		<div class="box"></div>
+		<div class="box"></div>
+		<div class="box"></div>
+		<div class="box"></div>
+		<div class="box"></div>
+		<div class="box"></div>
+
+		<div class="clear"></div>
+
+		<div id="percentages">
+			<p>Percentage of Dark Green Color:</p>
+			10%<input type="radio" value="10" name="radio" onChange="radioFunction()">
+			20%<input type="radio" value="20" name="radio" onChange="radioFunction()">
+			30%<input type="radio" value="30" name="radio" onChange="radioFunction()">
+			40%<input type="radio" value="40" name="radio" onChange="radioFunction()">
+			50%<input type="radio" value="50" name="radio" onChange="radioFunction()" checked="checked">
+			60%<input type="radio" value="60" name="radio" onChange="radioFunction()">
+			70%<input type="radio" value="70" name="radio" onChange="radioFunction()">
+			80%<input type="radio" value="80" name="radio" onChange="radioFunction()">
+			90%<input type="radio" value="90" name="radio" onChange="radioFunction()">
+		</div>
+
+		<button onclick="scramble()" type="button">Scramble</button>
+		
+	</div>
+
+	<script>
+	
+	var items=document.getElementsByClassName("box").length;
+
+	function radioFunction(){
+		var value = document.querySelector('input[name = "radio"]:checked').value;
+		value = parseInt(value)/100;
+		return value;
+	}
+
+	function scramble(){
+		var i=0;
+
+		while(i<items){
+			var currentItem=document.getElementsByClassName("box")[i];
+			var random=Math.random();
+	
+			if(random>radioFunction()){
+				currentItem.style.backgroundColor="#D0F0CB";
+			}
+		
+			else{
+				currentItem.style.backgroundColor="#79BFC9";
+			}	
+		
+			i++;
+		}
+	}
+
+	scramble();
+
+	</script>
+
+</body>
+</html>
